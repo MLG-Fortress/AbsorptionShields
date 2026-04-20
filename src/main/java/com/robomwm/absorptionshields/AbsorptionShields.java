@@ -41,7 +41,7 @@ public class AbsorptionShields extends JavaPlugin
     {
         try
         {
-            customItemRegistry = (CustomItemRegistry)getServer().getPluginManager().getPlugin("CustomItemRecipes");
+            customItemRegistry = (CustomItemRegistry)getServer().getPluginManager().getPlugin("CustomItemRegistry");
         }
         catch (Throwable rock)
         {
