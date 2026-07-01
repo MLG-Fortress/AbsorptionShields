@@ -205,7 +205,10 @@ public class ShieldManager implements Listener
 
         String name = null;
         if (plugin.getCustomItemRegistry() != null)
-            name = plugin.getCustomItemRegistry().extractCustomID(armorPiece.getItemMeta());
+        {
+            if (armorPiece.hasItemMeta())
+                name = plugin.getCustomItemRegistry().extractCustomID(armorPiece.getItemMeta());
+        }
         if (name == null)
             return armorPiece.getType().name();
         return name;
